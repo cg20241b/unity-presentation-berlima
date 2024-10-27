@@ -107,7 +107,7 @@ Things that we build for the shader graph;
     1. Capacity (32): The maximum number of particles that can be active at once is set to 32.
     2. Bounds Padding (0.5): This sets extra padding around the bounds of the particles, which helps prevent culling (removing from view) too early.
     3. Set Lifetime (0.2): Each particle has a short lifespan of 0.2 seconds, giving a quick flash-like effect.
-* -  Output Particle Quad
+* - Output Particle Quad
     1. Shader Graph: The shader graph for this effect is set to default, meaning the particle rendering uses a basic shader.
     2. Blend Mode (Additive): This blend mode makes the particles additive, which is useful for lightning or glowing effects as it enhances the brightness by adding colors together.
     3. Orient (Face Camera Plane): The particles are oriented to always face the camera, making them look consistent regardless of the viewer's perspective.
