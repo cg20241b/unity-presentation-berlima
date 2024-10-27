@@ -13,7 +13,7 @@ VFX Shader graph here is used for designing the look of the lightning itself (li
 <img width="1680" alt="Screenshot 2024-10-27 at 10 47 19 PM" src="https://github.com/user-attachments/assets/b9f32952-bab3-46c0-9893-03d3f3b4a29d">
 
 Things that we build for the shader graph;
-* - Time Node
+1. Time Node
 - The `Time` node provides a variety of time-based values, including:
     - `Time`: A simple time variable, increasing as the game runs.
     - `Sine Time`: Outputs a sine wave based on time, oscillating between -1 and 1.
@@ -21,45 +21,45 @@ Things that we build for the shader graph;
     - `Delta Time`: Represents the time between the current and previous frame 
     - This is used here to animate or influence other properties dynamically.
 
-* - Multiply Node (Yellow Box)
+2. Multiply Node (Yellow Box)
 - This node multiplies two values.
 - It receives `Time` as input, which may serve to animate the UV offset or other properties continuously.
 - The yellow color shown here is just a preview to signify an intermediate step.
 
-* - Noise Speed & Noise Scale
+3. Noise Speed & Noise Scale
 - These nodes are parameters used for controlling the behavior of a noise texture.
 - `NoiseSpeed`: Determines how fast the noise texture moves or changes over time.
 - `NoiseScale`: Controls the scale or frequency of the noise texture.
 - These values help create movement and variation in the noise pattern, which is essential for effects like flickering or randomness.
 
-* - Tiling and Offset Node
+4. Tiling and Offset Node
 - This node allows adjustments to the UV coordinates, including tiling (repetition) and offset (position).
 - By linking it with time and other parameters, this node can animate texture scrolling or scaling, essential for making the lightning effect appear to move.
 
-* - Simple Noise Node
+5. Simple Noise Node
 - This node generates a noise texture based on the input UV coordinates.
 - In this case, it’s likely set to `Deterministic` to ensure consistent results in the noise pattern.
 - The noise is used to create random variations, adding texture and natural look to the lightning effect.
 
-* -  Rectangle Node
+6.  Rectangle Node
 - The `Rectangle` node generates a simple rectangle shape.
 - The `Width` and `Height` parameters control the shape's size.
 - The output here appears as a binary black-and-white texture, potentially representing the base shape of the lightning effect before adding noise.
 
-* - Lerp Node
+7. Lerp Node
 - This node linearly interpolates between two values (A and B) based on a T value.
 - The `DistortionAmount` parameter connected here controls the intensity of this blend, possibly mixing between the original shape and a noisy version for a distorted lightning effect.
 - By changing this parameter over time, the shader can add or reduce distortion, adding dynamic behavior.
 
-* - Multiply Node (After Lerp)
+8.  Multiply Node (After Lerp)
 - This `Multiply` node combines the output of the `Lerp` operation with the rectangle shape and noise texture.
 - The multiplication here likely amplifies or masks parts of the lightning shape, adding depth or intensity to specific areas.
 
-* - UV Node
+9.  UV Node
 - This node represents the UV mapping of the texture, defining how it’s applied on the model.
 - It allows precise control over where the textures are placed and helps in adjusting offsets for animation or effects.
 
-* - Fragment Node
+10. Fragment Node
 - This node is the final output section:
     - `Base Color`: Sets the main color of the lightning.
     - `Alpha`: Controls transparency.
