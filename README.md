@@ -145,7 +145,7 @@ Things that we build for the shader graph;
     2. Bounds Padding (0.5): Adds a bit of extra space around the particle bounds to avoid early culling.
     3. Set Lifetime (0.2): The particle has a very short lifetime of 0.2 seconds, creating a brief flash typical of an impact.
     4. Set Position: This property is controlled by an "ImpactOffset" node, with the Y-position set to -1.2. This offset likely positions the flash slightly below a central point, simulating an effect on a surface or ground level.
-* -  Output Particle Quad
+* - Output Particle Quad
     1. Shader Graph: Uses a default shader.
     2. Blend Mode (Additive): The Additive blend mode intensifies the brightness by layering colors, which is ideal for a flash effect.
     3. Orient (Face Camera Plane): The particle always faces the camera, ensuring visibility from any angle.
@@ -184,10 +184,10 @@ Things that we build for the shader graph;
     3. Set Color: The color is a high-intensity, HDR bluish-white glow. This high brightness gives a vibrant, eye-catching effect that simulates an intense light burst.
     4. Set Size: Set to 2, which determines the initial size of the particle, making it fairly visible but not overly large.
 
-Summary
-Lightning: Quick bursts with high emission and erratic motion.
-Flash: Brief, bright explosion of light on lightning initiation.
-Glow: Persistent, ambient light around lightning to enhance visual impact.
-Impact Flash: Intense flash at the impact point for realism.
-Particles: Spark-like particles for additional details and chaos.
-Impact Glow: Soft, fading glow to represent residual energy post-impact.
+Summary<br>
+Lightning: Quick bursts with high emission and erratic motion.<br>
+Flash: Brief, bright explosion of light on lightning initiation.<br>
+Glow: Persistent, ambient light around lightning to enhance visual impact.<br>
+Impact Flash: Intense flash at the impact point for realism.<br>
+Particles: Spark-like particles for additional details and chaos.<br>
+Impact Glow: Soft, fading glow to represent residual energy post-impact.<br>
